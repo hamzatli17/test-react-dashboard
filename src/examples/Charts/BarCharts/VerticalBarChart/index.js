@@ -26,7 +26,9 @@ import { FormControl, Grid, InputLabel, NativeSelect } from "@mui/material";func
     : [];  const { data, options } = configs(chart.labels || [], chartDatasets);  const renderChart = (
     <MDBox py={2} pr={2} pl={icon.component ? 1 : 2}>
       {title || description ? (
-        <MDBox display="flex" px={description ? 1 : 0} pt={description ? 1 : 0}>
+        <Grid container spacing={2}>
+        <Grid  item xs={6} md={10}>
+           <MDBox display="flex" px={description ? 1 : 0} pt={description ? 1 : 0}>
           {icon.component && (
             <MDBox
               width="4rem"
@@ -50,7 +52,12 @@ import { FormControl, Grid, InputLabel, NativeSelect } from "@mui/material";func
             <MDBox mb={2}>
               <MDTypography component="div" variant="button" color="text">
                 {description}
-              </MDTypography>              <FormControl >
+              </MDTypography>            </MDBox>
+          </MDBox>
+        </MDBox>
+        </Grid>
+        <Grid  item xs={6} md={2}>
+        <FormControl >
                 <NativeSelect
                   defaultValue={30}
                   inputProps={{
@@ -63,10 +70,8 @@ import { FormControl, Grid, InputLabel, NativeSelect } from "@mui/material";func
                   <option value={30}>Mois</option>
                 </NativeSelect>
               </FormControl>
-            </MDBox>
-          </MDBox>
-        </MDBox>
-      ) : null}
+              </Grid>
+              </Grid>      ) : null}
       {useMemo(
         () => (
           <MDBox height={height}>

@@ -11,7 +11,7 @@ export default function Condidats() {
     <Card>
       <MDBox textAlign="left">
     
-        <MDTypography variant="button" fontWeight="light" color="text" p={2} >
+        <MDTypography variant="button" fontWeight="light" color="text" pb={2} >
           <p
             style={{
               fontFamily: "Montserrat",
@@ -64,8 +64,8 @@ export default function Condidats() {
             <CardDashboard
               color="light"
               icon="GroupIcon"
-              title="Dossiers favoris"
-              count={535}
+              title="Dossiers interessants"
+              count={64}
               percentage={{
                 color: "primary",
                 amount: "120",
@@ -79,8 +79,8 @@ export default function Condidats() {
             <CardDashboard
               color="light"
               icon="GroupIcon"
-              title="Condidats"
-              count={120}
+              title="Dossiers favoris"
+              count={535}
               percentage={{
                 color: "primary",
                 amount: "120",

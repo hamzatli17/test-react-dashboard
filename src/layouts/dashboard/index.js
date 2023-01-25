@@ -38,6 +38,8 @@ import Condidats from "./composants/condidats";
 import Annonce from "./composants/annonces";
 import Multiposting from "./composants/multiposting";
 import VerticalBarChart from "examples/Charts/BarCharts/VerticalBarChart";
+import Notification from "./composants/notifications";
+import GradientLineChart from "examples/Charts/LineCharts/GradientLineChart";
 
 function Dashboard() {
   const { sales, tasks } = reportsLineChartData;
@@ -61,30 +63,40 @@ function Dashboard() {
             </Grid>
             <Grid item xs={12} md={6} lg={4}>
               <MDBox mb={4}>
-                <VerticalBarChart
-                  description="Statistiques"
-                  chart={{
-                    labels: ["8/12", "8/12", "8/12", "8/12", "8/12", "48/12"],
-                    datasets: [
-                      {
-                        label: "Stats",
-                        color: "success",
-                        data: [15, 20, 12, 60, 20, 15],
-                      },
-                    ],
-                  }}
-                />
+              <VerticalBarChart
+            description="Statistiques"
+            chart={{
+              labels: ["8/12", "8/12", "8/12", "8/12", "8/12", "48/12"],
+              datasets: [
+                {
+                  label: "Stats",
+                  color: "success",
+                  data: [15, 20, 12, 60, 20, 15],
+                },
+              ],
+            }}
+          />
               </MDBox>
             </Grid>
           </Grid>
         </MDBox>
         <MDBox>
           <Grid container spacing={3}>
-            <Grid item xs={12} md={6} lg={8}>
-              <Projects />
-            </Grid>
             <Grid item xs={12} md={6} lg={4}>
-              <OrdersOverview />
+              <Notification />
+            </Grid>
+            <Grid item xs={12} md={6} lg={8}>
+            <GradientLineChart
+            title="Ma base CV"
+            description="Total des nouveaux profils :  3616"
+            chart={{
+              labels: ["Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],              datasets: [
+                {                  color: "info",
+                  data: [50, 40, 300, 220, 500, 250, 400, 230, 500],
+                },
+              ],
+            }}
+          />
             </Grid>
           </Grid>
         </MDBox>
