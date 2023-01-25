@@ -9,11 +9,14 @@ import Typography from "@mui/material/Typography";
 import MDBox from "components/MDBox";
 import ListItemButton from "@mui/material/ListItemButton";
 import MDButton from "components/MDButton";
+import { ListSubheader } from "@mui/material";
 function Multiposting() {
   return (
     <>
-      <List sx={{ width: "100%", bgcolor: "background.paper" }}>
-        <ListItem alignItems="flex-start">
+      <List sx={{ width: "80%", bgcolor: "background.paper" }}
+       className="list-group list-group-light  "
+       subheader={<ListSubheader>Multiposting</ListSubheader>}>
+        <ListItem alignItems="flex-start" className="list-group-item d-flex justify-content-between align-items-center">
           <ListItemAvatar>
             <Avatar
               alt="Cindy Baker"
@@ -51,8 +54,8 @@ function Multiposting() {
             }
           />
         </ListItem>
-        <Divider variant="inset" component="li" />
-        <ListItem alignItems="flex-start">
+      
+        <ListItem alignItems="flex-start" className="list-group-item d-flex justify-content-between align-items-center">
           <ListItemAvatar>
             <Avatar
               alt="Travis Howard"
@@ -89,8 +92,8 @@ function Multiposting() {
             }
           />
         </ListItem>
-        <Divider variant="inset" component="li" />
-        <ListItem alignItems="flex-start">
+        
+        <ListItem alignItems="flex-start" className="list-group-item d-flex justify-content-between align-items-center">
           <ListItemAvatar>
             <Avatar src="https://uploads-ssl.webflow.com/61f830c0e555e517ed9c24fe/61f830c0e555e521dd9c2e96_AboutIndeed_logo.png" />
           </ListItemAvatar>
@@ -124,8 +127,8 @@ function Multiposting() {
             }
           />
         </ListItem>
-        <Divider variant="inset" component="li" />
-        <ListItem alignItems="flex-start">
+   
+        <ListItem alignItems="flex-start" className="list-group-item d-flex justify-content-between align-items-center">
           <ListItemAvatar>
             <Avatar
               alt="Cindy Baker"

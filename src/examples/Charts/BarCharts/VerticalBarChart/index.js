@@ -1,41 +1,16 @@
-/**
-=========================================================
-* Material Dashboard 2 React - v2.1.0
-=========================================================
-
-* Product Page: https://www.creative-tim.com/product/material-dashboard-react
-* Copyright 2022 Creative Tim (https://www.creative-tim.com)
-
-Coded by www.creative-tim.com
-
- =========================================================
-
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-*/
-
 import { useMemo } from "react";
-
 // porp-types is a library for typechecking of props
 import PropTypes from "prop-types";
-
 // react-chartjs-2 components
 import { Bar } from "react-chartjs-2";
-
 // @mui material components
 import Card from "@mui/material/Card";
-import Icon from "@mui/material/Icon";
-
-// Material Dashboard 2 React components
+import Icon from "@mui/material/Icon";// Material Dashboard 2 React components
 import MDBox from "components/MDBox";
-import MDTypography from "components/MDTypography";
-
-// VerticalBarChart configurations
-import configs from "examples/Charts/BarCharts/VerticalBarChart/configs";
-
-// Material Dashboard 2 React base styles
+import MDTypography from "components/MDTypography";// VerticalBarChart configurations
+import configs from "examples/Charts/BarCharts/VerticalBarChart/configs";// Material Dashboard 2 React base styles
 import colors from "assets/theme/base/colors";
-
-function VerticalBarChart({ icon, title, description, height, chart }) {
+import { FormControl, Grid, InputLabel, NativeSelect } from "@mui/material";function VerticalBarChart({ icon, title, description, height, chart }) {
   const chartDatasets = chart.datasets
     ? chart.datasets.map((dataset) => ({
         ...dataset,
@@ -48,11 +23,7 @@ function VerticalBarChart({ icon, title, description, height, chart }) {
         fill: false,
         maxBarThickness: 35,
       }))
-    : [];
-
-  const { data, options } = configs(chart.labels || [], chartDatasets);
-
-  const renderChart = (
+    : [];  const { data, options } = configs(chart.labels || [], chartDatasets);  const renderChart = (
     <MDBox py={2} pr={2} pl={icon.component ? 1 : 2}>
       {title || description ? (
         <MDBox display="flex" px={description ? 1 : 0} pt={description ? 1 : 0}>
@@ -63,7 +34,7 @@ function VerticalBarChart({ icon, title, description, height, chart }) {
               bgColor={icon.color || "info"}
               variant="gradient"
               coloredShadow={icon.color || "info"}
-              borderRadius="xl"
+              borderRadius="lg"
               display="flex"
               justifyContent="center"
               alignItems="center"
@@ -79,7 +50,19 @@ function VerticalBarChart({ icon, title, description, height, chart }) {
             <MDBox mb={2}>
               <MDTypography component="div" variant="button" color="text">
                 {description}
-              </MDTypography>
+              </MDTypography>              <FormControl >
+                <NativeSelect
+                  defaultValue={30}
+                  inputProps={{
+                    name: "age",
+                    id: "uncontrolled-native",
+                  }}
+                >
+                  <option value={10}>Semaine</option>
+                  <option value={20}>Jour</option>
+                  <option value={30}>Mois</option>
+                </NativeSelect>
+              </FormControl>
             </MDBox>
           </MDBox>
         </MDBox>
@@ -92,21 +75,32 @@ function VerticalBarChart({ icon, title, description, height, chart }) {
         ),
         [chart, height]
       )}
+      <Grid container px={2} rowSpacing={0.5} columnSpacing={{ xs: 1, sm: 2, md: 1 }}>
+        <Grid item xs={6}>
+          <MDTypography component="div" variant="button" color="success">
+            <h5>5</h5>
+          </MDTypography>
+          <p>Candidats en mission</p>
+        </Grid>        <Grid item xs={6}>
+          <h5>34</h5>
+          <p>Candidats en mission</p>
+        </Grid>        <Grid item xs={6}>
+          <h5>12</h5>
+          <p>Commandes en ligne</p>
+        </Grid>        <Grid item xs={6}>
+          <h5>4</h5>
+          <p>Annonces en ligne</p>
+        </Grid>
+      </Grid>
     </MDBox>
-  );
-
-  return title || description ? <Card>{renderChart}</Card> : renderChart;
-}
-
-// Setting default values for the props of VerticalBarChart
+  );  return title || description ? <Card>{renderChart}</Card> : renderChart;
+}// Setting default values for the props of VerticalBarChart
 VerticalBarChart.defaultProps = {
   icon: { color: "info", component: "" },
   title: "",
   description: "",
   height: "19.125rem",
-};
-
-// Typechecking props for the VerticalBarChart
+};// Typechecking props for the VerticalBarChart
 VerticalBarChart.propTypes = {
   icon: PropTypes.shape({
     color: PropTypes.oneOf([
@@ -125,6 +119,4 @@ VerticalBarChart.propTypes = {
   description: PropTypes.oneOfType([PropTypes.string, PropTypes.node]),
   height: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   chart: PropTypes.objectOf(PropTypes.array).isRequired,
-};
-
-export default VerticalBarChart;
+};export default VerticalBarChart;
