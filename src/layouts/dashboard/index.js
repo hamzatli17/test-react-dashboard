@@ -30,25 +30,37 @@ import ComplexStatisticsCard from "examples/Cards/StatisticsCards/ComplexStatist
 // Data
 import reportsBarChartData from "layouts/dashboard/data/reportsBarChartData";
 import reportsLineChartData from "layouts/dashboard/data/reportsLineChartData";
-
+import React ,{ useEffect } from "react";
+import { useDispatch, useSelector } from 'react-redux';
 // Dashboard components
 import Projects from "layouts/dashboard/components/Projects";
 import OrdersOverview from "layouts/dashboard/components/OrdersOverview";
-import Condidats from "./composants/condidats";
+import Condidats from "./composants/candidats";
 import Annonce from "./composants/annonces";
 import Multiposting from "./composants/multiposting";
 import VerticalBarChart from "examples/Charts/BarCharts/VerticalBarChart";
 import Notification from "./composants/notifications";
 import GradientLineChart from "examples/Charts/LineCharts/GradientLineChart";
-
+import data from '../../data/candidatsData.json'
+import { setCondidatsData } from "redux/actions/candidatsActions";
 function Dashboard() {
-  const { sales, tasks } = reportsLineChartData;
+ 
+  console.log('data',data)
+  const candidatsData = useSelector((state) => state.candidatData);
 
+ 
+  const dispatch = useDispatch();
+  useEffect(() => {
+    setTimeout(() => {
+      dispatch(setCondidatsData(data))
+    }, 1000)
+  }, [])
+console.log('hi sanfour',candidatsData)
   return (
     <DashboardLayout>
       <DashboardNavbar />
       <MDBox py={3}>
-        <Condidats />
+        <Condidats value={candidatsData}/>
       </MDBox>
       <MDBox py={3}>
         <MDBox mt={4.5}>
