@@ -18,7 +18,7 @@ function Annonce() {
     <Grid item xs={8} md={6}>
       <List
         className="list-group list-group-light  "
-        sx={{ width: "100%", maxWidth: 360, bgcolor: "background.paper" }}
+        sx={{ width: "100%", bgcolor: "background.paper" }}
         subheader={<ListSubheader>Annonces</ListSubheader>}
       >
         <ListItem className="list-group-item d-flex justify-content-between align-items-center">

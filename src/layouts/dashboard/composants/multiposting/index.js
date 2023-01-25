@@ -1,108 +1,174 @@
 import React from "react";
-import styles from "./style.css";
 import List from "@mui/material/List";
 import ListItem from "@mui/material/ListItem";
-// Material Dashboard 2 React Components
+import Divider from "@mui/material/Divider";
+import ListItemText from "@mui/material/ListItemText";
+import ListItemAvatar from "@mui/material/ListItemAvatar";
+import Avatar from "@mui/material/Avatar";
+import Typography from "@mui/material/Typography";
+import MDBox from "components/MDBox";
+import ListItemButton from "@mui/material/ListItemButton";
 import MDButton from "components/MDButton";
-import MDAvatar from "components/MDAvatar";
-import ListItemAvatar from "@mui/material/ListItemAvatar"; // @mui material components
-import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
-import PlayArrowOutlinedIcon from "@mui/icons-material/PlayArrowOutlined";
-import BorderColorIcon from "@mui/icons-material/BorderColor";
-import PauseIcon from "@mui/icons-material/Pause";
-import RunningWithErrorsIcon from "@mui/icons-material/RunningWithErrors";
-import InventoryIcon from "@mui/icons-material/Inventory";
-import { Grid, ListSubheader } from "@mui/material";
 function Multiposting() {
   return (
-    <Grid item xs={8} md={6}>
-      <List
-        className="list-group list-group-light  "
-        sx={{ width: "100%", maxWidth: 360, bgcolor: "background.paper" }}
-        subheader={<ListSubheader>Annonces</ListSubheader>}
-      >
-        <ListItem className="list-group-item d-flex justify-content-between align-items-center">
-          <ListItemAvatar className="d-flex align-items-center ">
-            <MDAvatar className="avatar-list " bgColor="success">
-              <PlayArrowOutlinedIcon className="play-icon" />
-            </MDAvatar>{" "}
-            <div className="ms-3">
-              <p className="fw-bold mb-1">23</p>
-              <p className="text-muted mb-0">En ligne</p>
-            </div>
+    <>
+      <List sx={{ width: "100%", bgcolor: "background.paper" }}>
+        <ListItem alignItems="flex-start">
+          <ListItemAvatar>
+            <Avatar
+              alt="Cindy Baker"
+              src="https://is1-ssl.mzstatic.com/image/thumb/Purple125/v4/b6/87/24/b6872444-e262-6d44-5224-05d79cd6e41f/source/512x512bb.jpg"
+            />
           </ListItemAvatar>
-          <div className="d-flex align-items-center m-2 ">
-            <MDButton variant="gradient" color="info" iconOnly>
-              <ArrowForwardIosIcon />
-            </MDButton>
-          </div>
-        </ListItem>{" "}
-        <ListItem className="list-group-item d-flex justify-content-between align-items-center">
-          <div className="d-flex align-items-center">
-            <MDAvatar className="avatar-list " bgColor="info">
-              <BorderColorIcon className="edit-icon" />
-            </MDAvatar>
-            <div className="ms-3">
-              <p className="fw-bold mb-1">23</p>
-              <p className="text-muted mb-0">Brouillon</p>
-            </div>
-          </div>{" "}
-          <div className="d-flex align-items-center m-2 ">
-            <MDButton variant="gradient" color="info" iconOnly>
-              <ArrowForwardIosIcon />
-            </MDButton>
-          </div>
-        </ListItem>{" "}
-        <ListItem className="list-group-item d-flex justify-content-between align-items-center">
-          <div className="d-flex align-items-center">
-            <MDAvatar className="avatar-list " bgColor="light">
-              <PauseIcon className="pause-icon" />
-            </MDAvatar>
-            <div className="ms-3">
-              <p className="fw-bold mb-1">23</p>
-              <p className="text-muted mb-0">Désactivées</p>
-            </div>
-          </div>{" "}
-          <div className="d-flex align-items-center m-2 ">
-            <MDButton variant="gradient" color="info" iconOnly>
-              <ArrowForwardIosIcon />
-            </MDButton>
-          </div>
-        </ListItem>{" "}
-        <ListItem className="list-group-item d-flex justify-content-between align-items-center">
-          <div className="d-flex align-items-center">
-            <MDAvatar className="avatar-list " bgColor="primary">
-              <RunningWithErrorsIcon className="erreur-icon" />
-            </MDAvatar>
-            <div className="ms-3">
-              <p className="fw-bold mb-1">23</p>
-              <p className="text-muted mb-0">Expirées</p>
-            </div>
-          </div>{" "}
-          <div className="d-flex align-items-center m-2 ">
-            <MDButton variant="gradient" color="info" iconOnly>
-              <ArrowForwardIosIcon />
-            </MDButton>
-          </div>
-        </ListItem>{" "}
-        <ListItem className="list-group-item d-flex justify-content-between align-items-center">
-          <div className="d-flex align-items-center">
-            <MDAvatar className="avatar-list " bgColor="light">
-              <InventoryIcon className="archives-icon" />
-            </MDAvatar>
-            <div className="ms-3">
-              <p className="fw-bold mb-1">23</p>
-              <p className="text-muted mb-0">Archivées</p>
-            </div>
-          </div>{" "}
-          <div className="d-flex align-items-center m-2 ">
-            <MDButton variant="gradient" color="info" iconOnly>
-              <ArrowForwardIosIcon />
-            </MDButton>
-          </div>
+
+          <ListItemText
+            primary="test.com"
+            secondary={
+              <React.Fragment>
+                <Typography
+                  sx={{ display: "inline" }}
+                  component="span"
+                  variant="body2"
+                  color="text.primary"
+                >
+                  test.com
+                </Typography>
+              </React.Fragment>
+            }
+          />
+          <ListItemText
+            textAlign="left"
+            primary="10 annonces"
+            secondary={
+              <React.Fragment>
+                <Typography
+                  sx={{ display: "inline" }}
+                  component="span"
+                  variant="body2"
+                  color="text.blue"
+                ></Typography>
+              </React.Fragment>
+            }
+          />
         </ListItem>
+        <Divider variant="inset" component="li" />
+        <ListItem alignItems="flex-start">
+          <ListItemAvatar>
+            <Avatar
+              alt="Travis Howard"
+              src="https://play-lh.googleusercontent.com/04KgpN4Mxclqmg5ojsQiksqlKIFvzvjZ_dJ9Pxq-mCc32ay66TL6Vf8wQrGJGqUkRNqe"
+            />
+          </ListItemAvatar>
+          <ListItemText
+            primary="jobup"
+            secondary={
+              <React.Fragment>
+                <Typography
+                  sx={{ display: "inline" }}
+                  component="span"
+                  variant="body2"
+                  color="text.primary"
+                >
+                  jobup free
+                </Typography>
+              </React.Fragment>
+            }
+          />
+          <ListItemText
+            textAlign="left"
+            primary="6 annonces"
+            secondary={
+              <React.Fragment>
+                <Typography
+                  sx={{ display: "inline" }}
+                  component="span"
+                  variant="body2"
+                  color="text.blue"
+                ></Typography>
+              </React.Fragment>
+            }
+          />
+        </ListItem>
+        <Divider variant="inset" component="li" />
+        <ListItem alignItems="flex-start">
+          <ListItemAvatar>
+            <Avatar src="https://uploads-ssl.webflow.com/61f830c0e555e517ed9c24fe/61f830c0e555e521dd9c2e96_AboutIndeed_logo.png" />
+          </ListItemAvatar>
+          <ListItemText
+            primary="indeed"
+            secondary={
+              <React.Fragment>
+                <Typography
+                  sx={{ display: "inline" }}
+                  component="span"
+                  variant="body2"
+                  color="text.primary"
+                >
+                  indeed free
+                </Typography>
+              </React.Fragment>
+            }
+          />
+          <ListItemText
+            textAlign="left"
+            primary="4 annonces"
+            secondary={
+              <React.Fragment>
+                <Typography
+                  sx={{ display: "inline" }}
+                  component="span"
+                  variant="body2"
+                  color="text.blue"
+                ></Typography>
+              </React.Fragment>
+            }
+          />
+        </ListItem>
+        <Divider variant="inset" component="li" />
+        <ListItem alignItems="flex-start">
+          <ListItemAvatar>
+            <Avatar
+              alt="Cindy Baker"
+              src="https://media.glassdoor.com/sqll/3316040/talent-com-squarelogo-1586377194151.png"
+            />
+          </ListItemAvatar>
+          <ListItemText
+            primary="talent"
+            secondary={
+              <React.Fragment>
+                <Typography
+                  sx={{ display: "inline" }}
+                  component="span"
+                  variant="body2"
+                  color="text.primary"
+                >
+                  talent free
+                </Typography>
+              </React.Fragment>
+            }
+          />{" "}
+          <ListItemText
+            textAlign="left"
+            primary="2 annonces"
+            secondary={
+              <React.Fragment>
+                <Typography
+                  sx={{ display: "inline" }}
+                  component="span"
+                  variant="body2"
+                  color="text.blue"
+                ></Typography>
+              </React.Fragment>
+            }
+          />
+        </ListItem>
+        <div style={{ width: "70%", marginLeft: "50%" }}>
+          <MDButton variant="gradient" color="info" width="70%">
+            voir les annonces
+          </MDButton>
+        </div>
       </List>
-    </Grid>
+    </>
   );
 }
 

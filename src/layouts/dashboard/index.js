@@ -37,6 +37,7 @@ import OrdersOverview from "layouts/dashboard/components/OrdersOverview";
 import Condidats from "./composants/condidats";
 import Annonce from "./composants/annonces";
 import Multiposting from "./composants/multiposting";
+import VerticalBarChart from "examples/Charts/BarCharts/VerticalBarChart";
 
 function Dashboard() {
   const { sales, tasks } = reportsLineChartData;
@@ -56,19 +57,22 @@ function Dashboard() {
               </MDBox>
             </Grid>
             <Grid item xs={12} md={6} lg={4}>
-              <MDBox mb={4}>
-              <Multiposting/>
-              </MDBox>
+              <Multiposting />
             </Grid>
-
             <Grid item xs={12} md={6} lg={4}>
               <MDBox mb={4}>
-                <ReportsLineChart
-                  color="dark"
-                  title="completed tasks"
-                  description="Last Campaign Performance"
-                  date="just updated"
-                  chart={tasks}
+                <VerticalBarChart
+                  description="Statistiques"
+                  chart={{
+                    labels: ["8/12", "8/12", "8/12", "8/12", "8/12", "48/12"],
+                    datasets: [
+                      {
+                        label: "Stats",
+                        color: "success",
+                        data: [15, 20, 12, 60, 20, 15],
+                      },
+                    ],
+                  }}
                 />
               </MDBox>
             </Grid>
