@@ -12,7 +12,6 @@ import MDButton from "components/MDButton";
 import "./style.css";
 import { ListSubheader } from "@mui/material";
 function Multiposting(props) {
-  console.log(props.value.multipostingData)
   const multipostings=props.value.multipostingData
   return (
     <>

@@ -1,0 +1,3 @@
+module.exports = {
+    NOTIFICATION_LIST_SUCCESS: "NOTIFICATION_LIST_SUCCESS",
+};

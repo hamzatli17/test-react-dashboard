@@ -44,15 +44,19 @@ import GradientLineChart from "examples/Charts/LineCharts/GradientLineChart";
 import data from "../../data/candidatsData.json";
 import annonceData from "../../data/annonceData.json";
 import multipostingData from "../../data/multipostingData.json";
+import notificationData from "../../data/notificationData.json";
 
 
 import { setCondidatsData } from "redux/actions/candidatsActions";
 import { setAnnonceData } from "redux/actions/annonceActions";
 import { setMultipostingData } from "redux/actions/multipostingActions";
+import { setNotificationData } from "redux/actions/notificationActions";
 function Dashboard() {
   const candidatsData = useSelector((state) => state.candidatData);
   const annoncesData = useSelector((state) => state.annonceData);
   const multipostingsData = useSelector((state) => state.multipostingData);
+  const notificationsData = useSelector((state) => state.notificationData);
+
 
   const dispatch = useDispatch();
   useEffect(() => {
@@ -64,6 +68,9 @@ function Dashboard() {
     }, 1000);
     setTimeout(() => {
       dispatch(setMultipostingData(multipostingData));
+    }, 1000);
+    setTimeout(() => {
+      dispatch(setNotificationData(notificationData));
     }, 1000);
   }, []);
 
@@ -96,7 +103,7 @@ function Dashboard() {
           />
         </Grid>{" "}
         <Grid item xs={4}>
-          <Notification />
+          <Notification value={notificationsData} />
         </Grid>{" "}
         <Grid item xs={8}>
           <GradientLineChart

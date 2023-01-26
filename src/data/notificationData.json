@@ -1,0 +1,28 @@
+[{
+    "color":"info",
+    "icon":"notifications",
+    "title":"Heures à saisir pour 3 candidats",
+    "dateTime":"28/03",
+    "description":"Test Fribourg"
+},
+{
+    "color":"warning",
+    "icon":"notifications",
+    "title":"Propositions de poste à 12 candidats",
+    "dateTime":"28/03",
+    "description":"Test Genève"
+},
+{
+    "color":"info",
+    "icon":"notifications",
+    "title":"Documents à signer pour M.Philippot",
+    "dateTime":"28/03",
+    "description":"Test Genève"
+},
+{
+    "color":"error",
+    "icon":"notifications",
+    "title":"Nouveau message de Emilie Philippot",
+    "dateTime":"28/03",
+    "description":"Bonjour Ahmed,  Je voulais savoir si vous aviez reçu mes relevés d’heures..."
+}]
