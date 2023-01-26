@@ -1,0 +1,3 @@
+module.exports = {
+    MULTIPOSTING_LIST_SUCCESS: "MULTIPOSTING_LIST_SUCCESS",
+};
