@@ -1,5 +1,7 @@
-[{"count":66,"status":"En ligne"},
-{"count":19,"status":"brouillon"},
-{"count":36,"status":"Désactivées"},
-{"count":51,"status":"Expirées"},
-{"count":17,"status":"Archivées"}]
+[
+  { "count": 66, "image": "", "status": "En ligne" },
+  { "count": 19, "image": "", "status": "brouillon" },
+  { "count": 36, "image": "", "status": "Désactivées" },
+  { "count": 51, "image": "", "status": "Expirées" },
+  { "count": 17, "image": "", "status": "Archivées" }
+]

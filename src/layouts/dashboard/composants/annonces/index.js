@@ -13,8 +13,18 @@ import PauseIcon from "@mui/icons-material/Pause";
 import RunningWithErrorsIcon from "@mui/icons-material/RunningWithErrors";
 import InventoryIcon from "@mui/icons-material/Inventory";
 import { Grid, ListSubheader } from "@mui/material";
+import play from '../../../../assets/play.png'
+import brouillon from '../../../../assets/brouillon.png'
+import pause from '../../../../assets/pause.png'
+import expire from '../../../../assets/expire.png'
+import archive from '../../../../assets/archive.png'
+import {images} from '../../../../data/image'
 function Annonce(props) {
-  const annoncesData =props.value.annonceData
+  const annoncesData = props.value.annonceData;
+  for (let i = 0; i < annoncesData.length; i++) {
+    annoncesData[i].image=images[i]
+    
+  }
   return (
     <Grid xs={8} md={8}>
       <List
@@ -22,27 +32,25 @@ function Annonce(props) {
         subheader={<ListSubheader>Annonces</ListSubheader>}
       >
         {annoncesData.map((annonce) => {
-        return (
-          <>
-        {" "}
-        <ListItem className="list-group-item d-flex justify-content-between align-items-center">
-          <ListItemAvatar className="d-flex align-items-center ">
-            <MDAvatar className="avatar-list " bgColor="success">
-              <PlayArrowOutlinedIcon className="play-icon" />
-            </MDAvatar>
-            <div className="ms-3">
-              <p className="fw-bold mb-1">{annonce.count}</p>
-              <p className="text-muted mb-0">{annonce.status}</p>
-            </div>
-          </ListItemAvatar>
-          <div className="d-flex align-items-center p-3 ">
-            <MDButton variant="gradient" color="info" iconOnly>
-              <ArrowForwardIosIcon />
-            </MDButton>
-          </div>
-        </ListItem>{" "}
-        </>
-         );
+          return (
+            <>
+              {" "}
+              <ListItem className="list-group-item d-flex justify-content-between align-items-center">
+                <ListItemAvatar className="d-flex align-items-center ">
+                  <MDAvatar className="avatar-list" src={annonce.image} size="xs" />
+                  <div className="ms-3">
+                    <p className="fw-bold mb-1">{annonce.count}</p>
+                    <p className="text-muted mb-0">{annonce.status}</p>
+                  </div>
+                </ListItemAvatar>
+                <div className="d-flex align-items-center p-3 ">
+                  <MDButton variant="gradient" color="info" iconOnly>
+                    <ArrowForwardIosIcon />
+                  </MDButton>
+                </div>
+              </ListItem>{" "}
+            </>
+          );
         })}
       </List>
     </Grid>

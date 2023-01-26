@@ -91,7 +91,7 @@ function Dashboard() {
           <VerticalBarChart
             description="Statistiques"
             chart={{
-              labels: ["8/12", "8/12", "8/12", "8/12", "8/12", "48/12"],
+              labels: ["8/12", "8/12", "8/12", "8/12", "8/12", "8/12"],
               datasets: [
                 {
                   label: "Stats",
