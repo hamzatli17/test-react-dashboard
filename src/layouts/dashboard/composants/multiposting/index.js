@@ -9,53 +9,48 @@ import Typography from "@mui/material/Typography";
 import MDBox from "components/MDBox";
 import ListItemButton from "@mui/material/ListItemButton";
 import MDButton from "components/MDButton";
+import "./style.css";
 import { ListSubheader } from "@mui/material";
 function Multiposting() {
   return (
     <>
-      <List sx={{ width: "80%", bgcolor: "background.paper" }}
-       className="list-group list-group-light  "
-       subheader={<ListSubheader>Multiposting</ListSubheader>}>
-        <ListItem alignItems="flex-start" className="list-group-item d-flex justify-content-between align-items-center">
+      <List
+        sx={{ width: "80%", bgcolor: "background.paper" }}
+        className="list-group list-group-light  "
+        subheader={<ListSubheader>Multiposting</ListSubheader>}
+      >
+        <ListItem className="list-group-item d-flex justify-content-between align-items-center p-3">
           <ListItemAvatar>
             <Avatar
               alt="Cindy Baker"
               src="https://is1-ssl.mzstatic.com/image/thumb/Purple125/v4/b6/87/24/b6872444-e262-6d44-5224-05d79cd6e41f/source/512x512bb.jpg"
             />
-          </ListItemAvatar>
-
+          </ListItemAvatar>{" "}
           <ListItemText
             primary="test.com"
             secondary={
               <React.Fragment>
-                <Typography
-                  sx={{ display: "inline" }}
-                  component="span"
-                  variant="body2"
-                  color="text.primary"
-                >
-                  test.com
+                <Typography sx={{ display: "inline" }} component="span" variant="body2">
+                  jobup free
                 </Typography>
               </React.Fragment>
             }
           />
           <ListItemText
-            textAlign="left"
             primary="10 annonces"
+            className="sub-title"
             secondary={
               <React.Fragment>
                 <Typography
                   sx={{ display: "inline" }}
                   component="span"
                   variant="body2"
-                  color="text.blue"
                 ></Typography>
               </React.Fragment>
             }
           />
-        </ListItem>
-      
-        <ListItem alignItems="flex-start" className="list-group-item d-flex justify-content-between align-items-center">
+        </ListItem>{" "}
+        <ListItem className="list-group-item d-flex justify-content-between align-items-center p-3">
           <ListItemAvatar>
             <Avatar
               alt="Travis Howard"
@@ -78,8 +73,8 @@ function Multiposting() {
             }
           />
           <ListItemText
-            textAlign="left"
             primary="6 annonces"
+            className="sub-title"
             secondary={
               <React.Fragment>
                 <Typography
@@ -91,9 +86,8 @@ function Multiposting() {
               </React.Fragment>
             }
           />
-        </ListItem>
-        
-        <ListItem alignItems="flex-start" className="list-group-item d-flex justify-content-between align-items-center">
+        </ListItem>{" "}
+        <ListItem className="list-group-item d-flex justify-content-between align-items-center p-3">
           <ListItemAvatar>
             <Avatar src="https://uploads-ssl.webflow.com/61f830c0e555e517ed9c24fe/61f830c0e555e521dd9c2e96_AboutIndeed_logo.png" />
           </ListItemAvatar>
@@ -113,7 +107,7 @@ function Multiposting() {
             }
           />
           <ListItemText
-            textAlign="left"
+            className="sub-title"
             primary="4 annonces"
             secondary={
               <React.Fragment>
@@ -126,9 +120,8 @@ function Multiposting() {
               </React.Fragment>
             }
           />
-        </ListItem>
-   
-        <ListItem alignItems="flex-start" className="list-group-item d-flex justify-content-between align-items-center">
+        </ListItem>{" "}
+        <ListItem className="list-group-item d-flex justify-content-between align-items-center p-3">
           <ListItemAvatar>
             <Avatar
               alt="Cindy Baker"
@@ -151,7 +144,7 @@ function Multiposting() {
             }
           />{" "}
           <ListItemText
-            textAlign="left"
+            className="sub-title"
             primary="2 annonces"
             secondary={
               <React.Fragment>
@@ -163,9 +156,9 @@ function Multiposting() {
                 ></Typography>
               </React.Fragment>
             }
-          />
+          />{" "}
         </ListItem>
-        <div style={{ width: "70%", marginLeft: "50%" }}>
+        <div style={{ width: "70%", marginLeft: "50%", marginBottom: "10%", marginTop: "10%" }}>
           <MDButton variant="gradient" color="info" width="70%">
             voir les annonces
           </MDButton>
@@ -174,5 +167,4 @@ function Multiposting() {
     </>
   );
 }
-
 export default Multiposting;

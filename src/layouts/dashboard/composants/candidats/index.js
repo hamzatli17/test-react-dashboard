@@ -9,35 +9,24 @@ import CardDashboard from "examples/Cards/cardDashboard";
 import "./style.css"
 
 export default function Condidats(props) {
- console.log(props.value.condidatData)
+
  const data =props.value.condidatData
   return (
     <Card>
       <MDBox textAlign="left">
     
-        <MDTypography variant="button" fontWeight="light" color="text" pb={2} >
-          <p
-            style={{
-              fontFamily: "Montserrat",
-              fontStyle: "normal",
-              fontWeight: "500",
-              fontSize: "19.6785px",
-              lineHeight: "24px",
-            }}
-          >
-            {" "}
-            Condidats
-          </p>
-        </MDTypography>
+      <MDTypography variant="button" fontWeight="light" color="text" p={2} m={2}>
+        <p className="candidats-name" style={{marginLeft: "1%"}}>Candidats</p>
+      </MDTypography>
     
       </MDBox>
-      <Grid container spacing={3}>
-      {data.map((dat, index) => {
+      <Grid container spacing={2} p={2}>
+      {data.map((dat) => {
         return (
         <Grid item xs={12} md={6} lg={3}>
       
 
-          <MDBox mb={1.5}>
+          <MDBox mb={1}>
             <CardDashboard
               color="light"
               icon="GroupIcon"

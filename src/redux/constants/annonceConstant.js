@@ -1,0 +1,3 @@
+module.exports = {
+    ANNONCE_LIST_SUCCESS: "ANNONCE_LIST_SUCCESS",
+};

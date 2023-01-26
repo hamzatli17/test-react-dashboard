@@ -4,7 +4,6 @@ const {
 
 
 const condidatReducer = (state = {condidatData:[]}, action) => {
-  console.log('hi bb',action.type)
   switch (action.type) {
     case 'CONDIDATS_LIST_SUCCESS':
       return {

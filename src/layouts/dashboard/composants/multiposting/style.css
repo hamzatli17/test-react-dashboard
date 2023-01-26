@@ -1,32 +1,9 @@
-.avatar-list {
-    text-decoration: none !important;
-    margin-left: 20px;
-    width: 60px !important;
-    height: 60px !important;
-  }
-  .play-icon {
-    color: #badb9a !important;
-    width: 25px !important;
-    height: 25px !important;
-  }
-  .edit-icon {
-    color: #9bc6ee !important;
-    width: 25px !important;
-    height: 25px !important;
-  }
-  .pause-icon {
-    color: #636462 !important;
-    width: 25px !important;
-    height: 25px !important;
-  }
-  .erreur-icon {
-    color: #eebada !important;
-    width: 25px !important;
-    height: 25px !important;
-  }
-  .archives-icon {
-    color: #636462 !important;
-    width: 25px !important;
-    height: 25px !important;
-  }
-  
+.sub-title {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 13px;
+  line-height: 20px;
+  color: #5096f4;
+  justify-content: right;
+}
