@@ -42,7 +42,7 @@ import VerticalBarChart from "examples/Charts/BarCharts/VerticalBarChart";
 import Notification from "./composants/notifications";
 import GradientLineChart from "examples/Charts/LineCharts/GradientLineChart";
 import data from "../../data/candidatsData.json";
-import annonceData from "../../data/annonceData.json";
+import {annonceData} from "../../data/annonceData.js";
 import multipostingData from "../../data/multipostingData.json";
 import notificationData from "../../data/notificationData.json";
 

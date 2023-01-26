@@ -7,24 +7,13 @@ import MDButton from "components/MDButton";
 import MDAvatar from "components/MDAvatar";
 import ListItemAvatar from "@mui/material/ListItemAvatar"; // @mui material components
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
-import PlayArrowOutlinedIcon from "@mui/icons-material/PlayArrowOutlined";
-import BorderColorIcon from "@mui/icons-material/BorderColor";
-import PauseIcon from "@mui/icons-material/Pause";
-import RunningWithErrorsIcon from "@mui/icons-material/RunningWithErrors";
-import InventoryIcon from "@mui/icons-material/Inventory";
+
 import { Grid, ListSubheader } from "@mui/material";
-import play from '../../../../assets/play.png'
-import brouillon from '../../../../assets/brouillon.png'
-import pause from '../../../../assets/pause.png'
-import expire from '../../../../assets/expire.png'
-import archive from '../../../../assets/archive.png'
-import {images} from '../../../../data/image'
+
 function Annonce(props) {
   const annoncesData = props.value.annonceData;
-  for (let i = 0; i < annoncesData.length; i++) {
-    annoncesData[i].image=images[i]
-    
-  }
+ 
+
   return (
     <Grid xs={8} md={8}>
       <List
